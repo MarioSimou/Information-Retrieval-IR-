@@ -1,30 +1,28 @@
 # Information-Retrieval-IR-
 This package corresponds to a Stance Detection project that seeked to find the relatedness between pairs of headlines and article bodies. A Vector Space Model (VSM), KL-divergence language and BMS25 model were observed to calculate the stance of a given pair. 
-'''
+
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
 # A vector space model (VSM) is instantiated.
-VSM = VSM()
+#VSM = VSM()
 
 # Load a dataframe as the model's collection. The name of the column that will be considered as the collection needs to 
-be specified.
-collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of similarities',
+#be specified.
+#collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of #similarities',
                                               'retrieval model is not a mathematical model','random model']})
-or 
-collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model ','consists','a','mathematical','model','that','finds','values','of','similarities']),
-                               ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
-                               ' '.join(['random', 'model'])]})
-VSM.load_collection(collection, 'Collection')
+#or 
+#collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model #','consists','a','mathematical','model','that','finds','values','of','similarities']),
+#                               ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
+#                               ' '.join(['random', 'model'])]})
+#VSM.load_collection(collection, 'Collection')
                                              
 # Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that 
-cosine similarity is going to be calculated.
-- term frequency
-tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf')
-- term frequency x inverse document frequency
-tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf_idf')
+#cosine similarity is going to be calculated.
+#- term frequency
+#tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of #similarities', measure = 'tf')
+#- term frequency x inverse document frequency
+#tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values #of similarities', measure = 'tf_idf')
 
-
-'''
 PROBABILISTIC MODEL IMPLEMENTATION
 ----------------------------------
 # Create a probabilistic model

@@ -3,62 +3,63 @@ This package corresponds to a Stance Detection project that seeked to find the r
 
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
-# A vector space model (VSM) is instantiated.
-#VSM = VSM()
+    A vector space model (VSM) is instantiated.
+    VSM = VSM()
 
-# Load a dataframe as the model's collection. The name of the column that will be considered as the collection needs to 
-#be specified.
-#collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of #similarities',
-                                              'retrieval model is not a mathematical model','random model']})
-#or 
-#collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model #','consists','a','mathematical','model','that','finds','values','of','similarities']),
-#                               ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
-#                               ' '.join(['random', 'model'])]})
-#VSM.load_collection(collection, 'Collection')
-                                             
-# Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that 
-#cosine similarity is going to be calculated.
-#- term frequency
-#tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of #similarities', measure = 'tf')
-#- term frequency x inverse document frequency
-#tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values #of similarities', measure = 'tf_idf')
+    Load a dataframe as the model's collection. The name of the column that will be considered as the collection needs to 
+    be specified.
+    collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of similarities',
+                                                  'retrieval model is not a mathematical model','random model']})
+    or 
+    collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model ','consists','a','mathematical','model','that','finds','values','of','similarities']),
+                                   ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
+                                   ' '.join(['random', 'model'])]})
+    VSM.load_collection(collection, 'Collection')
+
+    Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that 
+    cosine similarity is going to be calculated.
+    - term frequency
+    tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf')
+    - term frequency x inverse document frequency
+    tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf_idf')
 
 PROBABILISTIC MODEL IMPLEMENTATION
 ----------------------------------
-# Create a probabilistic model
-probalistic_model = Probabilistic_models()
+    # Create a probabilistic model
+    probalistic_model = Probabilistic_models()
 
-# Create a collection
-collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of similarities',
-                                              'retrieval model is not a mathematical model','random model']})
-or the collection might be similarly loaded as:
-collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model ','consists','a','mathematical','model','that','finds','values','of','similarities']),
-                               ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
-                               ' '.join(['random', 'model'])]})
-# Load the collection
-probalistic_model.load_collection(collection, 'Collection')
+    # Create a collection
+    collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of similarities',
+                                                  'retrieval model is not a mathematical model','random model']})
+    or the collection might be similarly loaded as:
+    collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model ','consists','a','mathematical','model','that','finds','values','of','similarities']),
+                                   ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),
+                                   ' '.join(['random', 'model'])]})
+    # Load the collection
+    probalistic_model.load_collection(collection, 'Collection')
 
-Choose the right smoothing technique
+    Choose the right smoothing technique
+    
 # LINEAR INTERPOLATION
     # Jeliner-Mercer Smoothing
     # specifying a method of 'jeliner-mercer', a jeliner-mercer smoothing is performed
     # - the parameter of jeliner-mercer tecnique is checked to be within the range of 0 and 1
     
-    jeliner_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', method = 'jeliner-mercer',log= True, parameter= 0.5)
+    jeliner_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model                            that finds values of similarities', method = 'jeliner-mercer',log= True, parameter= 0.5)
     
     # Dirichlet
     # specifying a method of 'dirichlet', a dirichlet smoothing is performed
     
-    dirichlet_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', method = 'dirichlet',log= True, parameter= 5)
+    dirichlet_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model                          that finds values of similarities', method = 'dirichlet',log= True, parameter= 5)
 # BAYESIAN SMOOTHING
     # Bayesian
     # specifying a method of 'bayesian', a bayesian smoothing is performed
 
-    bayesian_value = probalistic_model.KL_divergence('retrieval model','an information retrieval model consists a mathematical model that finds values of similarities', method='bayesian', log=True, parameter=0.5)
+    bayesian_value = probalistic_model.KL_divergence('retrieval model','an information retrieval model consists a mathematical model                            that finds values of similarities', method='bayesian', log=True, parameter=0.5)
 
 # BMS25 Retrieval model    
     # BMS25
     # the parameters k1 and k2 needs to be defined
     
-    bms25_value = probalistic_model.BM25('retrieval model','an information retrieval model consists a mathematical model that finds values of similarities',k1 =1.2 ,k2 =5)
+    bms25_value = probalistic_model.BM25('retrieval model','an information retrieval model consists a mathematical model that finds                           values of similarities',k1 =1.2 ,k2 =5)
     

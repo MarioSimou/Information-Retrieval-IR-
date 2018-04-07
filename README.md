@@ -1,6 +1,6 @@
 # Information-Retrieval-IR-
 This package corresponds to a Stance Detection project that seeked to find the relatedness between pairs of headlines and article bodies. A Vector Space Model (VSM), KL-divergence language and BMS25 model were observed to calculate the stance of a given pair. 
-
+'''
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
 # A vector space model (VSM) is instantiated.
@@ -24,7 +24,7 @@ tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval mo
 tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf_idf')
 
 
-
+'''
 PROBABILISTIC MODEL IMPLEMENTATION
 ----------------------------------
 # Create a probabilistic model

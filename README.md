@@ -9,9 +9,9 @@ A probabilistic model that implements a KL-divergence language model under the J
 
 **TextPreprocessing.py**
  A hardcoded script that was used to perform the steps of: 
- i) tokenisation
- ii) stop words removal
- iii)case folding
+ -tokenisation
+ -stop words removal
+ -case folding
  
  ----------------------------------------------------------------------------------------------------------------------------------
 

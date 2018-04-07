@@ -18,11 +18,11 @@ A probabilistic model that implements a KL-divergence language model under the J
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
     #A vector space model (VSM) is instantiated.
-    VSM = VSM()
+    > VSM = VSM()
 
     #Load a dataframe as the model's collection. The name of the column that will be considered as the collection needs to 
     #be specified.
-    collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of                    similarities','retrieval model is not a mathematical model','random model']})
+    > collection = pd.DataFrame({'Collection': ['an information retrieval model consists a mathematical model that finds values of                    similarities','retrieval model is not a mathematical model','random model']})
     #or 
     collection = pd.DataFrame({'Collection': [' '.join(['an','information', 'retrieval ','model                                                                             ','consists','a','mathematical','model','that','finds','values','of','similarities']),
                                    ' '.join(['retrieval', 'model', 'is', 'not', 'a' ,'mathematical' ,'model']),

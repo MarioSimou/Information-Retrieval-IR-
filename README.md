@@ -27,6 +27,7 @@ __Load the collection__
 __Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that  cosine similarity #is going to be calculated__
 **TERM FREQUENCY**
 >tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values  of similarities', measure = 'tf')
+
 **TERM FREQUENCY x INVERSE DOCUMENT FREQUENCY**
 >tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf_idf')
 

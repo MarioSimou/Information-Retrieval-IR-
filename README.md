@@ -17,7 +17,9 @@ A probabilistic model that implements a KL-divergence language model under the J
 
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
+
 ###A vector space model (VSM) is instantiated.
+
 >VSM = VSM()
 
     #Load a dataframe as the model's collection. The name of the column that will be considered as the collection needs to 

@@ -2,9 +2,11 @@
 This package corresponds to a Stance Detection project that seeked to find the relatedness between pairs of headlines and article bodies. A Vector Space Model (VSM), KL-divergence language and BMS25 model were observed to calculate the stance of a given pair. 
 
 **VSM.py**
+
 a vector space model (VSM) that considers a headline and body article in vector space. The VSM model is compatible with a term frequency weighting scheme (tfi), as well as a term frequence with inverse document term weight(tf_idf).
 
 **ProbabilisticModels.py**
+
 A probabilistic model that implements a KL-divergence language model under the Jeliner-Mercer, Dirichlet and Bayesian smoothing. A BMS25 retrieval models is also included.
 
 **TextPreprocessing.py**

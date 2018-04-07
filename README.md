@@ -40,7 +40,7 @@ PROBABILISTIC MODEL IMPLEMENTATION
 
     Choose the right smoothing technique
     
-# LINEAR INTERPOLATION
+    # LINEAR INTERPOLATION
     # Jeliner-Mercer Smoothing
     # specifying a method of 'jeliner-mercer', a jeliner-mercer smoothing is performed
     # - the parameter of jeliner-mercer tecnique is checked to be within the range of 0 and 1
@@ -51,13 +51,13 @@ PROBABILISTIC MODEL IMPLEMENTATION
     # specifying a method of 'dirichlet', a dirichlet smoothing is performed
     
     dirichlet_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model                          that finds values of similarities', method = 'dirichlet',log= True, parameter= 5)
-# BAYESIAN SMOOTHING
+    # BAYESIAN SMOOTHING
     # Bayesian
     # specifying a method of 'bayesian', a bayesian smoothing is performed
 
     bayesian_value = probalistic_model.KL_divergence('retrieval model','an information retrieval model consists a mathematical model                            that finds values of similarities', method='bayesian', log=True, parameter=0.5)
 
-# BMS25 Retrieval model    
+    # BMS25 Retrieval model    
     # BMS25
     # the parameters k1 and k2 needs to be defined
     

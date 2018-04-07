@@ -18,16 +18,16 @@ A probabilistic model that implements a KL-divergence language model under the J
 VECTOR SPACE MODEL IMPLEMENTATION
 ----------------------------------
 
-#A vector space model (VSM) is instantiated.
+__A vector space model (VSM) is instantiated__
 >VSM = VSM()
 
-#Load the collection   
+__Load the collection__   
 >VSM.load_collection(collection, 'Collection')
 
-#Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that  cosine similarity #is going to be calculated.
-#-TERM FREQUENCY
+__Calculate the cosine similarity of a query with respect to a given docuemnt. The measure/weight defines the way that  cosine similarity #is going to be calculated__
+**TERM FREQUENCY**
 >tf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values  of similarities', measure = 'tf')
-#- term frequency x inverse document frequency
+**TERM FREQUENCY x INVERSE DOCUMENT FREQUENCY**
 >tf_idf_value = VSM.cosine_similarity('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', measure = 'tf_idf')
 
 PROBABILISTIC MODEL IMPLEMENTATION

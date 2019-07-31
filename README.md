@@ -61,11 +61,13 @@ __LINEAR INTERPOLATION__
 jeliner_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', method = 'jeliner-mercer',log= True, parameter= 0.5)
 ```    
 2. Dirichlet
-```dirichlet_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', method = 'dirichlet',log= True, parameter= 5)
+```
+dirichlet_value = probalistic_model.KL_divergence('retrieval model', 'an information retrieval model consists a mathematical model that finds values of similarities', method = 'dirichlet',log= True, parameter= 5)
 ```
 __BAYESIAN SMOOTHING__
 1. Bayesian
-```bayesian_value = probalistic_model.KL_divergence('retrieval model','an information retrieval model consists a mathematical model that finds values of similarities', method='bayesian', log=True, parameter=0.5)
+```
+bayesian_value = probalistic_model.KL_divergence('retrieval model','an information retrieval model consists a mathematical model that finds values of similarities', method='bayesian', log=True, parameter=0.5)
 ```
 
 BMS25 Retrieval model    
